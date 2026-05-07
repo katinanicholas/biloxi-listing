@@ -332,13 +332,15 @@
     <h2 class="section-title display">Get the Details Sent to You</h2>
     <div class="divider"></div>
     <p>Ready to take a closer look? Drop your info below and Katina will follow up to confirm a showing time — or to answer any questions you have before you visit.</p>
-    <div class="lead-form">
-      <input class="lead-input" type="text" placeholder="Your Name" id="name-input">
-      <input class="lead-input" type="email" placeholder="Email Address" id="email-input">
-      <input class="lead-input" type="tel" placeholder="Phone (optional)" id="phone-input">
-      <button class="lead-submit" id="submit-btn" onclick="handleSubmit()">Send My Info</button>
+    <form class="lead-form" name="listing-inquiry" method="POST" action="https://formspree.io/f/xvzlbglb">
+      <input type="hidden" name="_subject" value="New Inquiry — Biloxi Listing">
+      <input type="text" name="_gotcha" style="display:none">
+      <input class="lead-input" type="text" name="name" placeholder="Your Name" id="name-input" required>
+      <input class="lead-input" type="email" name="email" placeholder="Email Address" id="email-input" required>
+      <input class="lead-input" type="tel" name="phone" placeholder="Phone (optional)" id="phone-input">
+      <button type="submit" class="lead-submit" id="submit-btn">Send My Info</button>
       <p class="lead-note" id="form-note">No spam. No pressure. Just the information you need.</p>
-    </div>
+    </form>
     <div class="lead-direct">
       Or contact directly: &nbsp;
       <a href="tel:2283466781">228.346.6781</a> &nbsp;·&nbsp;
@@ -395,21 +397,6 @@
 </footer>
 
 <script>
-  function handleSubmit() {
-    var name = document.getElementById("name-input").value.trim();
-    var email = document.getElementById("email-input").value.trim();
-    if (!name || !email) {
-      document.getElementById("form-note").textContent = "Please enter your name and email to continue.";
-      document.getElementById("form-note").style.color = "#E8C07A";
-      return;
-    }
-    var btn = document.getElementById("submit-btn");
-    btn.textContent = "Sent — I'll be in touch soon.";
-    btn.style.background = "#2D6B67";
-    btn.disabled = true;
-    document.getElementById("form-note").textContent = "Thanks, " + name + ". Check your inbox for next steps.";
-    document.getElementById("form-note").style.color = "rgba(253,250,245,0.55)";
-  }
   document.querySelectorAll("a[href^='#']").forEach(function(a) {
     a.addEventListener("click", function(e) {
       var t = document.querySelector(this.getAttribute("href"));
