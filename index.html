@@ -151,6 +151,14 @@
   .footer-links a:hover { color: rgba(253,250,245,0.8); }
   .footer-legal { margin-top: 20px; font-size: 11px; color: rgba(253,250,245,0.22); }
 
+  .schools { background: var(--sand); }
+  .schools > .container > p { color: var(--text-mid); max-width: 600px; font-size: 16px; margin-bottom: 28px; }
+  .school-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+  .school-card { background: var(--warm-white); border: 1px solid var(--border); border-radius: 8px; padding: 18px 16px; }
+  .school-level { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stone); margin-bottom: 6px; }
+  .school-name { font-size: 15px; font-weight: 500; color: var(--deep-teal); }
+  .school-district { display: inline-flex; align-items: center; gap: 8px; background: rgba(26,71,68,0.06); border: 1px solid var(--border); border-radius: 20px; padding: 6px 14px; font-size: 12px; color: var(--teal-mid); margin-bottom: 20px; }
+
   @media (max-width: 600px) {
     section { padding: 56px 20px; }
     .hero { padding: 72px 20px 64px; }
@@ -299,6 +307,31 @@
     <div class="divider"></div>
     <p>This home sits in a centrally located, well-connected part of Biloxi (39531). You're close to I-10 and Highway 90, giving you quick access to Gulfport, Ocean Springs, D'Iberville, and beyond — without feeling like you're in the middle of everything.</p>
     <p>It's the kind of location that makes logistics easier: commuting, errands, healthcare, entertainment — all manageable without the congestion of more densely populated areas. For those who spend time at Keesler Air Force Base or travel frequently, the positioning is particularly practical.</p>
+  </div>
+</section>
+
+<section class="schools" id="schools">
+  <div class="container">
+    <p class="section-label">Education</p>
+    <h2 class="section-title display">Zoned Schools</h2>
+    <div class="divider"></div>
+    <p>This home is zoned for Biloxi Public Schools — a district serving the Gulf Coast community with schools at every level close to home.</p>
+    <div class="school-district">🎓 Biloxi Public School District</div>
+    <div class="school-grid">
+      <div class="school-card">
+        <div class="school-level">Elementary</div>
+        <div class="school-name">Popps Ferry Elementary</div>
+      </div>
+      <div class="school-card">
+        <div class="school-level">Middle School</div>
+        <div class="school-name">Biloxi Junior High</div>
+      </div>
+      <div class="school-card">
+        <div class="school-level">High School</div>
+        <div class="school-name">Biloxi High School</div>
+      </div>
+    </div>
+    <p style="margin-top:20px; font-size:14px; color:var(--stone);">Want to learn more about the district? <a href="https://www.biloxischools.net/43132_3" target="_blank" style="color:var(--teal-mid); text-decoration:none; font-weight:500;">Visit the Biloxi Public Schools website →</a></p>
   </div>
 </section>
 
