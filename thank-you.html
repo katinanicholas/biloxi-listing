@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Got It — Keys. Clarity. Katina.</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --deep-teal: #1A4744;
+    --teal-mid: #2D6B67;
+    --warm-white: #FDFAF5;
+    --stone: #8A8578;
+    --gold: #C4964A;
+    --border: rgba(26,71,68,0.15);
+  }
+  body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--deep-teal);
+    color: var(--warm-white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    text-align: center;
+  }
+  .check {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: rgba(196,150,74,0.15);
+    border: 1px solid rgba(196,150,74,0.35);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 28px;
+    font-size: 26px;
+  }
+  h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(34px, 6vw, 52px);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    max-width: 480px;
+  }
+  h1 em { font-style: italic; color: #E8C07A; }
+  p {
+    font-size: 16px;
+    color: rgba(253,250,245,0.65);
+    max-width: 400px;
+    line-height: 1.65;
+    margin-bottom: 36px;
+  }
+  .btn {
+    background: var(--gold);
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 28px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    transition: opacity 0.2s;
+    margin: 6px;
+  }
+  .btn:hover { opacity: 0.88; }
+  .btn-outline {
+    background: transparent;
+    color: rgba(253,250,245,0.75);
+    border: 1px solid rgba(253,250,245,0.25);
+    text-decoration: none;
+    padding: 13px 28px;
+    border-radius: 4px;
+    font-size: 14px;
+    display: inline-block;
+    transition: border-color 0.2s;
+    margin: 6px;
+  }
+  .btn-outline:hover { border-color: rgba(253,250,245,0.5); }
+  .brand {
+    margin-top: 56px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #E8C07A;
+  }
+  .brand-sub {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(253,250,245,0.28);
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+  <div class="check">✓</div>
+  <h1>You're on <em>Katina's</em> radar.</h1>
+  <p>Your message came through. Katina will follow up shortly with details, showing availability, and answers to any questions you have.</p>
+  <div>
+    <a href="https://calendly.com/katinabodden/let-s-chat" target="_blank" class="btn">Book a Showing Now</a>
+    <a href="/" class="btn-outline">Back to the Listing</a>
+  </div>
+  <div class="brand">Keys. Clarity. Katina.</div>
+  <div class="brand-sub">Unlocking Smart Moves, One Key at a Time.</div>
+</body>
+</html>
