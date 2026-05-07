@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Biloxi Home | Assumable VA Mortgage | Keys. Clarity. Katina.</title>
 <meta name="description" content="A centrally located home in Biloxi, MS (39531) with an assumable VA mortgage. Tour this cul-de-sac home near Biloxi Beach. Contact Katina Bodden, Real Estate Strategist.">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-10HDNH6MLX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-10HDNH6MLX', { send_page_view: true });
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -397,10 +405,39 @@
 </footer>
 
 <script>
+  // Smooth scroll
   document.querySelectorAll("a[href^='#']").forEach(function(a) {
     a.addEventListener("click", function(e) {
       var t = document.querySelector(this.getAttribute("href"));
       if (t) { e.preventDefault(); t.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    });
+  });
+
+  // CTA click tracking
+  document.querySelectorAll("a[href*='calendly'], a[href*='tel:'], a[href*='mailto:']").forEach(function(a) {
+    a.addEventListener("click", function() {
+      var label = this.textContent.trim() || this.href;
+      gtag('event', 'cta_click', { event_category: 'engagement', event_label: label });
+    });
+  });
+
+  // Form submission tracking
+  var form = document.querySelector("form");
+  if (form) {
+    form.addEventListener("submit", function() {
+      gtag('event', 'form_submit', { event_category: 'lead', event_label: 'Biloxi Listing Inquiry' });
+    });
+  }
+
+  // Scroll depth tracking (25%, 50%, 75%, 90%)
+  var scrollMarks = { 25: false, 50: false, 75: false, 90: false };
+  window.addEventListener("scroll", function() {
+    var scrollPct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    [25, 50, 75, 90].forEach(function(mark) {
+      if (scrollPct >= mark && !scrollMarks[mark]) {
+        scrollMarks[mark] = true;
+        gtag('event', 'scroll_depth', { event_category: 'engagement', event_label: mark + '%' });
+      }
     });
   });
 </script>
